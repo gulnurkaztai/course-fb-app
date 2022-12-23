@@ -1,12 +1,9 @@
-import { useState } from "react"
 
-export default function RatingSelect({select}) {
-    const[selected, setSelected] = useState(10)
 
- 
+export default function RatingSelect({select, selected}) {
+
     const handleChange = (e) => {
         //change string to number with +
-        setSelected(+e.currentTarget.value)
         select(+e.currentTarget.value)
     }
     const radioButtons = [1,2,3,4,5,6,7,8,9,10]
